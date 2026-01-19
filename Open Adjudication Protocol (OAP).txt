@@ -1,0 +1,114 @@
+Open Adjudication Protocol (OAP)
+Product Requirements Document (PRD)
+________________________________________
+1. Product Overview
+Product Name: Open Adjudication Protocol (OAP)
+Product Type: B2B Trust & Safety Infrastructure (API-first, doctrine-driven)
+Purpose: OAP provides a transparent, AI-assisted reasoning layer for online disputes and moderation events. It does not issue verdicts or enforce penalties. Instead, it produces structured, explainable analyses that make conflicts intelligible, defensible, and auditable for platforms, moderators, users, and regulators.
+OAP is designed to reduce moderation opacity, user churn, regulatory risk, and operational overhead while preserving human agency and community-specific norms.
+________________________________________
+2. Problem Statement
+Online platforms face three systemic challenges:
+1.	Perceived Unfairness: Users disengage or escalate when moderation decisions appear arbitrary or unexplained.
+2.	Operational Cost: Human moderation is expensive, slow, inconsistent, and psychologically taxing.
+3.	Regulatory Pressure: Regulations (e.g., EU Digital Services Act) require clear, timely “statements of reasons” for moderation decisions.
+Existing solutions focus on enforcement (bans, removals) rather than legibility of reasoning.
+OAP addresses this gap by standardizing how decisions are explained, not what decisions are made.
+________________________________________
+3. Target Customers & Users
+Primary Customers (Buyers)
+•	Online platforms (forums, marketplaces, social networks)
+•	Community-hosting SaaS products
+•	Marketplaces with dispute resolution workflows
+•	Trust & Safety and Compliance teams
+End Users (Non-buyers)
+•	Community moderators
+•	Platform administrators
+•	Disputing users (view-only access to analysis)
+•	Legal and compliance reviewers
+________________________________________
+4. Core Product Philosophy
+OAP is norm-agnostic but procedurally fixed.
+•	OAP does not define values or community standards.
+•	Adopting platforms supply their own rules, guidelines, and policies.
+•	OAP guarantees a transparent, consistent, and humble reasoning process applied to those rules.
+________________________________________
+5. OAP Doctrine (System Constraints)
+The system must always comply with the OAP Doctrine:
+1.	Radical Visibility — All reasoning is visible to involved parties by default.
+2.	Whiteboard Mandate — Illuminate disputes; never issue verdicts.
+3.	Epistemic Humility — Explicitly state uncertainty and missing context.
+4.	Separation of Facts and Values — Analyze actions and text, not character or intent.
+5.	Human-in-Control — AI outputs are advisory and non-enforcing.
+6.	Consistency Over Outcome — Procedural fairness over engineered results.
+7.	Norm Source Declaration — All evaluative criteria must be explicitly supplied and cited.
+These principles are immutable and override all customer configuration.
+________________________________________
+6. Core Features (MVP)
+6.1 Dispute Analysis Engine (API)
+Input: - Conversation transcript - Platform-supplied community rules - Optional moderator context
+Output (Structured JSON): - Neutral summary of each party’s claims - Identified points of agreement and disagreement - Rule citations with exact quoted text - Areas of ambiguity or missing information - Emotional escalation indicators (non-diagnostic) - Resolution space (possible paths forward)
+The engine must refuse to proceed if no applicable rule can be cited.
+________________________________________
+6.2 Citation Anchoring (Safety-Critical)
+•	Every evaluative statement must cite an exact rule clause.
+•	If no citation exists, the system must:
+o	Explicitly state the absence
+o	Escalate for human review
+•	No inferred, paraphrased, or invented rules are permitted.
+This is a hard safety gate.
+________________________________________
+6.3 Transparent Output View
+•	Analysis is visible to all dispute participants by default.
+•	Platforms may restrict visibility only for safety or legal reasons.
+•	Any restriction must itself be disclosed in-system.
+________________________________________
+6.4 Moderator Review Mode (Optional)
+•	Moderators can review AI analysis before sharing.
+•	Moderators may add human annotations.
+•	AI cannot override or bypass human decisions.
+________________________________________
+7. Product Tiers
+Tier 1 — Utility API
+•	Per-dispute pricing
+•	JSON-only output
+•	Rule ingestion support
+Tier 2 — Review Dashboard
+•	Web-based interface
+•	Case history
+•	Human-in-the-loop workflows
+Tier 3 — Analytics & Audit (Optional)
+•	Consistency metrics
+•	Conflict trend analysis
+•	Compliance exports (PDF/JSON)
+________________________________________
+8. Non-Goals (Explicitly Out of Scope)
+•	Automated bans or penalties
+•	Moral judgments or character assessments
+•	Truth arbitration outside supplied rules
+•	Replacement of human moderators
+•	Legal advice or binding decisions
+________________________________________
+9. Regulatory & Compliance Considerations
+•	Designed to support DSA “Statement of Reasons” requirements
+•	All outputs logged and auditable
+•	Clear provenance of rules and reasoning
+•	No hidden or probabilistic enforcement
+________________________________________
+10. Success Metrics
+•	Reduction in user appeals
+•	Reduction in moderation handling time
+•	Increased user trust indicators
+•	Regulatory audit pass rates
+•	Consistency across similar cases
+________________________________________
+11. Key Risks & Mitigations
+Risk	Mitigation
+AI hallucination	Citation Anchoring + escalation
+Perceived bias	Radical visibility + rule citation
+Overreach	Strict non-enforcement policy
+Legal exposure	Norm-agnostic positioning
+________________________________________
+12. Long-Term Vision
+OAP aims to become a reference standard for transparent dispute reasoning across online platforms—providing a shared procedural language for explaining decisions without centralizing moral authority.
+OAP succeeds when disagreements remain human, but chaos does not.

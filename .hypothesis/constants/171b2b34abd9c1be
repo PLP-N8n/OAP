@@ -1,0 +1,4 @@
+# file: C:\Projects\OAP\normalizer.py
+# hypothesis_version: 6.150.2
+
+[0.5, '.', '. ', '.!?', 'Always ', 'Do not ', "Don't ", 'MD', 'Never ', 'No ', 'OPENAI_API_KEY', 'VB', 'VBP', 'VERB', '\\s+', '__main__', 'about us', 'allowed', 'always', 'avoid', 'banned', 'be ', "can't", 'cannot', 'content', 'do not', "don't", 'en_core_web_sm', 'ensure', 'forbidden', 'gpt-4o', 'introduction', 'json_object', 'keep', 'make sure', 'must', 'neg', 'never', 'no ', 'not ', 'overview', 'please', 'prohibited', 'refrain', 'report', 'required', 'respect', 'role', 'shall', 'should', 'system', 'thank you', 'type', 'user', 'welcome', 'will not', "won't"]

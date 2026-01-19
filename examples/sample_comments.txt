@@ -1,0 +1,17 @@
+Sample Comments for Testing
+
+VIOLATION EXAMPLES:
+1. "You're such an idiot, John Smith from 123 Main Street should shut up"
+2. "Check out my amazing crypto course! Use code REDDIT50 for discount!"
+3. "This is completely off-topic but here's my political rant..."
+4. "F*** you, you piece of s***!"
+
+BORDERLINE EXAMPLES:
+1. "I strongly disagree with your technical analysis"
+2. "That's not how machine learning works, you might want to research more"
+3. "This seems like promotional content to me"
+
+NO VIOLATION EXAMPLES:
+1. "Great article! Thanks for sharing this technology news"
+2. "I have a different perspective on this AI development"
+3. "Could you provide more technical details about the implementation?"

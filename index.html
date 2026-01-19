@@ -11,37 +11,115 @@
         theme: {
           extend: {
             colors: {
+              ink: {
+                700: '#1a2340',
+                800: '#141c2f',
+                900: '#0f1422',
+                950: '#0b0f1a',
+              },
               slate: {
                 850: '#151e2e',
                 950: '#020617',
               }
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Manrope', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['IBM Plex Mono', 'monospace'],
             },
           },
         },
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --ink-950: #0b0f1a;
+        --ink-900: #0f1422;
+        --ink-800: #141c2f;
+        --ink-700: #1a2340;
+        --panel: rgba(12, 18, 33, 0.65);
+        --panel-border: rgba(148, 163, 184, 0.18);
+        --accent: #2dd4bf;
+        --accent-strong: #14b8a6;
+        --accent-warm: #f59e0b;
+        --accent-cool: #38bdf8;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Manrope', sans-serif;
+        background:
+          radial-gradient(900px 500px at 10% -10%, rgba(45, 212, 191, 0.18), transparent 60%),
+          radial-gradient(800px 500px at 90% 5%, rgba(56, 189, 248, 0.16), transparent 55%),
+          radial-gradient(1000px 600px at 50% 120%, rgba(245, 158, 11, 0.08), transparent 60%),
+          var(--ink-950);
+        color: #e5eef8;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+        background-size: 60px 60px;
+        opacity: 0.18;
+        pointer-events: none;
+        z-index: 0;
+      }
+      #root {
+        position: relative;
+        z-index: 1;
       }
       .glass-panel {
-        background: rgba(255, 255, 255, 0.03);
+        background: var(--panel);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--panel-border);
       }
       .glass-button {
-        background: rgba(59, 130, 246, 0.1);
+        background: rgba(45, 212, 191, 0.12);
         backdrop-filter: blur(4px);
-        border: 1px solid rgba(59, 130, 246, 0.3);
+        border: 1px solid rgba(45, 212, 191, 0.35);
       }
       .glass-button:hover {
-        background: rgba(59, 130, 246, 0.2);
-        border-color: rgba(59, 130, 246, 0.5);
+        background: rgba(45, 212, 191, 0.2);
+        border-color: rgba(45, 212, 191, 0.55);
+      }
+      .reveal {
+        animation: fadeUp 0.8s ease-out both;
+      }
+      .reveal-delay-1 {
+        animation-delay: 0.08s;
+      }
+      .reveal-delay-2 {
+        animation-delay: 0.16s;
+      }
+      .reveal-delay-3 {
+        animation-delay: 0.24s;
+      }
+      .float-slow {
+        animation: float 10s ease-in-out infinite;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
       }
     </style>
     <!-- Microsoft Clarity Tracking Code -->
@@ -65,7 +143,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-950 text-white antialiased">
+  <body class="bg-ink-950 text-white antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

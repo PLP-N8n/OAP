@@ -2,11 +2,14 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="get-certified" className="bg-slate-950 pt-20 pb-10 border-t border-white/5">
+    <footer id="get-certified" className="bg-ink-950 pt-20 pb-10 border-t border-white/5">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-2xl mx-auto mb-20">
-          <h2 className="text-4xl font-bold text-white mb-6">Stop risking fines. Start automating trust.</h2>
-          <button className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white text-lg font-bold rounded-xl shadow-xl shadow-blue-900/20 transition-all transform hover:-translate-y-1">
+          <span className="text-xs uppercase tracking-[0.3em] text-slate-400">Ready to deploy</span>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mt-4 mb-6">
+            Stop risking fines. Start automating trust.
+          </h2>
+          <button className="px-10 py-5 bg-gradient-to-r from-teal-400 via-sky-400 to-amber-300 hover:from-teal-300 hover:via-sky-300 hover:to-amber-200 text-ink-950 text-lg font-bold rounded-xl shadow-xl shadow-teal-900/20 transition-all transform hover:-translate-y-1">
             Get OAP Certified
           </button>
         </div>

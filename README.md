@@ -45,6 +45,11 @@ export OPENAI_API_KEY="your-api-key-here"
 python normalizer.py
 ```
 
+#### Citation Checker (Step 2)
+```bash
+python citation_checker.py --rules-text "No harassment. No spam." --comment "This is spam."
+```
+
 #### Web Interface Demo
 ```bash
 streamlit run demo_app.py
@@ -60,11 +65,14 @@ python test_normalizer.py
 ```
 oap-mvp/
 ├── normalizer.py          # Core citation anchoring engine
+├── citation_checker.py    # Step 2: Citation anchoring checker
 ├── demo_app.py           # Streamlit web interface
 ├── test_normalizer.py    # Test suite
 ├── requirements.txt      # Python dependencies
 ├── examples/
 │   ├── reddit_rules.txt  # Sample community guidelines
+│   ├── discord_rules.txt  # Sample Discord guidelines
+│   ├── twitter_rules.txt  # Sample Twitter/X guidelines
 │   └── sample_comments.txt # Test comments
 └── README.md
 ```

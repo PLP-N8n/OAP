@@ -55,9 +55,9 @@ This MVP focuses on proving the core Citation Anchoring innovation with minimal 
 
 ### 1.2 Testing for Step 1
 - [x] 1.6 Write unit tests for rule extraction accuracy
-- [ ] 1.7 Write property test for rule ingestion determinism
-- [ ] 1.8 Test with various rule formats (Reddit rules, Discord guidelines, etc.)
-- [ ] 1.9 Validate JSON output structure consistency
+- [x] 1.7 Write property test for rule ingestion determinism
+- [x] 1.8 Test with various rule formats (Reddit rules, Discord guidelines, etc.)
+- [x] 1.9 Validate JSON output structure consistency
 
 ## Step 2: The "Citation" Script (The Core IP)
 
@@ -65,18 +65,18 @@ This MVP focuses on proving the core Citation Anchoring innovation with minimal 
 **Validates**: Requirements 2.1, 2.2, 2.3 (Citation Anchoring System)
 
 ### 2.1 Citation Anchoring Engine
-- [ ] 2.1 Create Python script `citation_checker.py` that takes user comment + rules JSON
-- [ ] 2.2 Implement exact text matching between comment and rule violations
-- [ ] 2.3 Implement semantic similarity matching for rule violations
-- [ ] 2.4 Create citation confidence scoring (0-1 scale)
-- [ ] 2.5 Flag statements that cannot be anchored to any rule
+- [x] 2.1 Create Python script `citation_checker.py` that takes user comment + rules JSON
+- [x] 2.2 Implement exact text matching between comment and rule violations
+- [x] 2.3 Implement semantic similarity matching for rule violations
+- [x] 2.4 Create citation confidence scoring (0-1 scale)
+- [x] 2.5 Flag statements that cannot be anchored to any rule
 
 ### 2.2 Violation Detection Logic
-- [ ] 2.6 Analyze user comment for potential rule violations
-- [ ] 2.7 Match violations to specific rule clauses from Step 1 output
-- [ ] 2.8 Generate violation report with exact rule citations
-- [ ] 2.9 Implement "No Violation" output when no rules are matched
-- [ ] 2.10 Ensure every violation statement includes rule quote
+- [x] 2.6 Analyze user comment for potential rule violations
+- [x] 2.7 Match violations to specific rule clauses from Step 1 output
+- [x] 2.8 Generate violation report with exact rule citations
+- [x] 2.9 Implement "No Violation" output when no rules are matched
+- [x] 2.10 Ensure every violation statement includes rule quote
 
 **Input Example**:
 ```python
@@ -97,11 +97,11 @@ rules_json = {...} # Output from normalizer.py
 ```
 
 ### 2.3 Testing for Step 2
-- [ ] 2.11 Write property test for citation anchoring completeness
-- [ ] 2.12 Write property test for citation text accuracy
-- [ ] 2.13 Test edge cases (borderline violations, ambiguous content)
-- [ ] 2.14 Validate that unsupported statements are flagged
-- [ ] 2.15 Test with real-world comment examples
+- [x] 2.11 Write property test for citation anchoring completeness
+- [x] 2.12 Write property test for citation text accuracy
+- [x] 2.13 Test edge cases (borderline violations, ambiguous content)
+- [x] 2.14 Validate that unsupported statements are flagged
+- [x] 2.15 Test with real-world comment examples
 
 ## Step 3: The "Demo" Interface (Streamlit)
 
@@ -109,32 +109,32 @@ rules_json = {...} # Output from normalizer.py
 **Validates**: Requirements 4.1, 4.4 (Transparent output generation)
 
 ### 3.1 Streamlit Web Interface
-- [ ] 3.1 Create Streamlit app `demo_app.py` with clean UI
-- [ ] 3.2 Build input form for pasting rule text (Step 1 input)
-- [ ] 3.3 Display normalized rules output in formatted JSON
-- [ ] 3.4 Create input form for user comment (Step 2 input)
-- [ ] 3.5 Display violation analysis with highlighted citations
+- [x] 3.1 Create Streamlit app `demo_app.py` with clean UI
+- [x] 3.2 Build input form for pasting rule text (Step 1 input)
+- [x] 3.3 Display normalized rules output in formatted JSON
+- [x] 3.4 Create input form for user comment (Step 2 input)
+- [x] 3.5 Display violation analysis with highlighted citations
 
 ### 3.2 Demo User Experience
-- [ ] 3.6 Add example rule sets (Reddit, Discord, Twitter guidelines)
-- [ ] 3.7 Include sample problematic comments for testing
-- [ ] 3.8 Create clear before/after comparison showing citation anchoring
-- [ ] 3.9 Add explanation text about the "Safety Gate" concept
-- [ ] 3.10 Style interface professionally for sales presentations
+- [x] 3.6 Add example rule sets (Reddit, Discord, Twitter guidelines)
+- [x] 3.7 Include sample problematic comments for testing
+- [x] 3.8 Create clear before/after comparison showing citation anchoring
+- [x] 3.9 Add explanation text about the "Safety Gate" concept
+- [x] 3.10 Style interface professionally for sales presentations
 
 ### 3.3 Demo Features
-- [ ] 3.11 Real-time processing (paste rules → see normalized output)
-- [ ] 3.12 Interactive violation checking (paste comment → see analysis)
-- [ ] 3.13 Export functionality for rules JSON and violation reports
-- [ ] 3.14 Clear visual indicators for violations vs. no violations
-- [ ] 3.15 Mobile-responsive design for demos on tablets/phones
+- [x] 3.11 Real-time processing (paste rules → see normalized output)
+- [x] 3.12 Interactive violation checking (paste comment → see analysis)
+- [x] 3.13 Export functionality for rules JSON and violation reports
+- [x] 3.14 Clear visual indicators for violations vs. no violations
+- [x] 3.15 Mobile-responsive design for demos on tablets/phones
 
 ### 3.4 Testing for Step 3
-- [ ] 3.16 Test UI with various screen sizes and devices
-- [ ] 3.17 Validate end-to-end workflow (rules → normalization → citation)
-- [ ] 3.18 Test with real community guidelines from major platforms
-- [ ] 3.19 Ensure error handling for malformed inputs
-- [ ] 3.20 Performance testing with large rule sets
+- [x] 3.16 Test UI with various screen sizes and devices
+- [x] 3.17 Validate end-to-end workflow (rules → normalization → citation)
+- [x] 3.18 Test with real community guidelines from major platforms
+- [x] 3.19 Ensure error handling for malformed inputs
+- [x] 3.20 Performance testing with large rule sets
 
 ## Technical Implementation Notes
 
